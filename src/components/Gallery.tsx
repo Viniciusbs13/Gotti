@@ -6,7 +6,7 @@ const portfolioItems = [
     id: 1,
     title: "Rosa Fine Line",
     category: "Fine Line",
-    image: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1000&auto=format&fit=crop",
+    image: "https://lh3.googleusercontent.com/d/1oxpJ35aNqegCtRkycAw8aECdG8TEyp5R",
     size: "large",
   },
   {

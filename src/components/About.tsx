@@ -13,7 +13,7 @@ export default function About() {
         >
           <div className="absolute inset-0 bg-accent/10 mix-blend-overlay z-10" />
           <img 
-            src="https://drive.google.com/uc?export=view&id=1f7MeLGdOnb1ax7VePhzbzrDQJwDKf3aP" 
+            src="https://lh3.googleusercontent.com/d/1f7MeLGdOnb1ax7VePhzbzrDQJwDKf3aP" 
             alt="Junior Gotti em ação" 
             className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105"
             referrerPolicy="no-referrer"
