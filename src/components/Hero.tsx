@@ -27,7 +27,7 @@ export default function Hero() {
         <img 
           src="https://lh3.googleusercontent.com/d/1G5VixqxIkruZHxy9uF7jco2ATDpRnhw4" 
           alt="Junior Gotti Tattoo" 
-          className="w-full h-full object-cover grayscale brightness-50"
+          className="w-full h-full object-cover md:grayscale grayscale-0 brightness-50"
           referrerPolicy="no-referrer"
         />
       </motion.div>

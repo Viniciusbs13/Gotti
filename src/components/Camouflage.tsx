@@ -34,7 +34,7 @@ export default function Camouflage() {
               <img
                 src={showAfter ? camouflageImages.after : camouflageImages.before}
                 alt={showAfter ? "Depois da Camuflagem" : "Antes da Camuflagem"}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover md:grayscale grayscale-0 group-hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
               

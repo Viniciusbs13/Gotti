@@ -13,7 +13,7 @@ export default function About() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % aboutImages.length);
-    }, 4000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -36,8 +36,8 @@ export default function About() {
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105"
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="w-full h-full object-cover md:grayscale grayscale-0 transition-transform duration-1000 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
           </AnimatePresence>
