@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
+import Camouflage from "./components/Camouflage";
 import Events from "./components/Events";
 import Contact from "./components/Contact";
 
@@ -64,6 +65,7 @@ export default function App() {
         <div className="relative z-10 bg-ink">
           <Gallery />
           <About />
+          <Camouflage />
           <Events />
           <Contact />
         </div>

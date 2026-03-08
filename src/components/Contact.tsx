@@ -40,7 +40,8 @@ export default function Contact() {
               </div>
               <div>
                 <span className="font-mono text-[10px] uppercase tracking-widest opacity-40 block mb-1">Localização</span>
-                <p className="font-serif text-xl font-medium">Campinas, SP</p>
+                <p className="font-serif text-xl font-medium">Mogi Guaçu, SP</p>
+                <p className="font-sans text-sm opacity-60">Av. Nove de Abril, Espaço Be Coworking</p>
               </div>
             </div>
             <a 
@@ -82,23 +83,13 @@ export default function Contact() {
           className="glass p-12 rounded-3xl"
         >
           <form className="flex flex-col gap-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="flex flex-col gap-2">
-                <label className="font-mono text-[10px] uppercase tracking-widest opacity-40">Nome Completo</label>
-                <input 
-                  type="text" 
-                  placeholder="Seu Nome"
-                  className="bg-transparent border-b border-white/10 py-4 font-serif text-xl focus:outline-none focus:border-accent transition-colors"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-mono text-[10px] uppercase tracking-widest opacity-40">E-mail</label>
-                <input 
-                  type="email" 
-                  placeholder="seu@email.com"
-                  className="bg-transparent border-b border-white/10 py-4 font-serif text-xl focus:outline-none focus:border-accent transition-colors"
-                />
-              </div>
+            <div className="flex flex-col gap-2">
+              <label className="font-mono text-[10px] uppercase tracking-widest opacity-40">Nome</label>
+              <input 
+                type="text" 
+                placeholder="Seu Nome"
+                className="bg-transparent border-b border-white/10 py-4 font-serif text-xl focus:outline-none focus:border-accent transition-colors"
+              />
             </div>
             
             <div className="flex flex-col gap-2">
@@ -111,10 +102,10 @@ export default function Contact() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="font-mono text-[10px] uppercase tracking-widest opacity-40">Local e Tamanho</label>
+              <label className="font-mono text-[10px] uppercase tracking-widest opacity-40">Local da Tattoo</label>
               <input 
                 type="text" 
-                placeholder="ex: Antebraço, 10cm"
+                placeholder="ex: Antebraço, Costas..."
                 className="bg-transparent border-b border-white/10 py-4 font-serif text-xl focus:outline-none focus:border-accent transition-colors"
               />
             </div>

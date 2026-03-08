@@ -1,6 +1,22 @@
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import { useState, useEffect } from "react";
+
+const aboutImages = [
+  "https://lh3.googleusercontent.com/d/17GKB610DNiDqN299JAEvgOpLNpc0mvmK",
+  "https://lh3.googleusercontent.com/d/1hy5Enn38wQ4flXmizUR9CTnV1sKacFH",
+  "https://lh3.googleusercontent.com/d/1Hesr75c_rdmpRkfOAaPRsV5oMUXHyJRC"
+];
 
 export default function About() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % aboutImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="about" className="py-24 px-6 bg-ink/50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
@@ -12,12 +28,19 @@ export default function About() {
           className="relative aspect-[4/5] rounded-3xl overflow-hidden group"
         >
           <div className="absolute inset-0 bg-accent/10 mix-blend-overlay z-10" />
-          <img 
-            src="https://lh3.googleusercontent.com/d/1f7MeLGdOnb1ax7VePhzbzrDQJwDKf3aP" 
-            alt="Junior Gotti em ação" 
-            className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105"
-            referrerPolicy="no-referrer"
-          />
+          <AnimatePresence mode="wait">
+            <motion.img 
+              key={currentIndex}
+              src={aboutImages[currentIndex]} 
+              alt="" 
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105"
+              referrerPolicy="no-referrer"
+            />
+          </AnimatePresence>
           
           {/* Floating Detail */}
           <motion.div 
@@ -27,7 +50,7 @@ export default function About() {
             className="absolute bottom-8 right-8 glass p-6 rounded-2xl z-20 max-w-[200px]"
           >
             <span className="font-mono text-[10px] uppercase tracking-widest text-accent block mb-2">Experiência</span>
-            <p className="font-serif text-2xl font-bold leading-none">12+ Anos de Maestria</p>
+            <p className="font-serif text-2xl font-bold leading-none">6 Anos de Maestria</p>
           </motion.div>
         </motion.div>
 
@@ -55,7 +78,7 @@ export default function About() {
               transition={{ delay: 0.2 }}
               className="font-sans text-lg opacity-80 leading-relaxed mb-8"
             >
-              Localizado no coração da cidade, Junior Gotti redefiniu os limites do fine line e do realismo. Com formação em artes clássicas, sua transição para a pele foi uma evolução natural de seu espírito criativo.
+              Localizado em Mogi Guaçu no coração da cidade, na Av. Nove de Abril, espaço Be Coworking, Junior Gotti redefiniu os limites do fine line e do realismo. Com formação em artes clássicas, sua transição para a pele foi uma evolução natural de seu espírito criativo.
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}

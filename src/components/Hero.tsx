@@ -25,8 +25,8 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/60 to-ink z-10" />
         <img 
-          src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=2000&auto=format&fit=crop" 
-          alt="Tattoo Studio" 
+          src="https://lh3.googleusercontent.com/d/1G5VixqxIkruZHxy9uF7jco2ATDpRnhw4" 
+          alt="Junior Gotti Tattoo" 
           className="w-full h-full object-cover grayscale brightness-50"
           referrerPolicy="no-referrer"
         />

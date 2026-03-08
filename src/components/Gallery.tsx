@@ -3,38 +3,45 @@ import { useState } from "react";
 
 const portfolioItems = [
   {
-    id: 1,
-    title: "Rosa Fine Line",
+    id: 7,
+    title: "Homenagem Pet",
     category: "Fine Line",
-    image: "https://lh3.googleusercontent.com/d/1oxpJ35aNqegCtRkycAw8aECdG8TEyp5R",
+    image: "https://lh3.googleusercontent.com/d/1DrtuEWqJw80QYYA6bqq8Scg4M6aaeAcp",
     size: "large",
   },
   {
+    id: 1,
+    title: "Espada",
+    category: "Fine Line",
+    image: "https://lh3.googleusercontent.com/d/1oxpJ35aNqegCtRkycAw8aECdG8TEyp5R",
+    size: "small",
+  },
+  {
     id: 2,
-    title: "Retrato Realista",
+    title: "Bússola Realista",
     category: "Realismo",
-    image: "https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=1000&auto=format&fit=crop",
+    image: "https://lh3.googleusercontent.com/d/1MFLTSymKjo91acHUqngzc6Ir4cnwcfve",
     size: "small",
   },
   {
     id: 3,
-    title: "Fechamento Geométrico",
-    category: "Geométrico",
-    image: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?q=80&w=1000&auto=format&fit=crop",
+    title: "Tigre Realista",
+    category: "Realismo",
+    image: "https://lh3.googleusercontent.com/d/1AdXnHECZmvJOFTcZH45G4QO9HmezeeDo",
     size: "medium",
   },
   {
     id: 4,
-    title: "Escrita Minimalista",
-    category: "Minimalista",
-    image: "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=1000&auto=format&fit=crop",
+    title: "Tubarão Fine Line",
+    category: "Fine Line",
+    image: "https://lh3.googleusercontent.com/d/1cq9WzmAyN4Hcc9YmT8jq7SUIEUG5QQmZ",
     size: "small",
   },
   {
     id: 5,
-    title: "Fluxo Abstrato",
-    category: "Abstrato",
-    image: "https://images.unsplash.com/photo-1550537687-c91072c4792d?q=80&w=1000&auto=format&fit=crop",
+    title: "Fênix Majestosa",
+    category: "Realismo",
+    image: "https://lh3.googleusercontent.com/d/1qjswhai32Lo9DRd2ASq6xXdoNn-rBYl8",
     size: "large",
   },
   {
@@ -126,9 +133,14 @@ export default function Gallery() {
         whileInView={{ opacity: 1 }}
         className="mt-16 flex justify-center"
       >
-        <button className="px-12 py-5 border border-accent/30 text-accent font-mono text-[10px] uppercase tracking-[0.3em] rounded-full hover:bg-accent hover:text-ink transition-all duration-300">
+        <a 
+          href="https://www.instagram.com/juniorgotti.tattoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+          target="_blank" 
+          rel="noreferrer"
+          className="px-12 py-5 border border-accent/30 text-accent font-mono text-[10px] uppercase tracking-[0.3em] rounded-full hover:bg-accent hover:text-ink transition-all duration-300 inline-block"
+        >
           Ver Portfólio Completo
-        </button>
+        </a>
       </motion.div>
     </section>
   );

@@ -21,16 +21,24 @@ export default function Navbar() {
       </motion.div>
 
       <div className="hidden md:flex items-center gap-12 font-mono text-[11px] uppercase tracking-widest">
-        {["Portfólio", "Sobre", "Eventos", "Contato"].map((item, i) => (
+        {[
+          { name: "Portfólio", href: "#portfolio" },
+          { name: "Junior Gotti", href: "#about" },
+          { name: "Camuflagem", href: "#camuflagem" },
+          { name: "Eventos", href: "#eventos" },
+          { name: "Contato", href: "https://wa.me/5519981901945", external: true }
+        ].map((item, i) => (
           <motion.a
-            key={item}
-            href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`}
+            key={item.name}
+            href={item.href}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noreferrer" : undefined}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 * i }}
             className="hover:text-accent transition-colors relative group"
           >
-            {item}
+            {item.name}
             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full"></span>
           </motion.a>
         ))}
@@ -60,14 +68,22 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="fixed inset-0 bg-ink flex flex-col items-center justify-center gap-8 md:hidden z-[-1]"
         >
-          {["Portfólio", "Sobre", "Eventos", "Contato"].map((item) => (
+          {[
+            { name: "Portfólio", href: "#portfolio" },
+            { name: "Junior Gotti", href: "#about" },
+            { name: "Camuflagem", href: "#camuflagem" },
+            { name: "Eventos", href: "#eventos" },
+            { name: "Contato", href: "https://wa.me/5519981901945", external: true }
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`}
+              key={item.name}
+              href={item.href}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noreferrer" : undefined}
               onClick={() => setIsOpen(false)}
-              className="font-serif text-4xl hover:text-accent transition-colors"
+              className="font-serif text-4xl hover:text-accent transition-colors text-center"
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </motion.div>
