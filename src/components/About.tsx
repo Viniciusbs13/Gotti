@@ -78,7 +78,7 @@ export default function About() {
               transition={{ delay: 0.2 }}
               className="font-sans text-lg opacity-80 leading-relaxed mb-8"
             >
-              Localizado em Mogi Guaçu no coração da cidade, na Av. Nove de Abril, espaço Be Coworking, Junior Gotti redefiniu os limites do fine line e do realismo. Com formação em artes clássicas, sua transição para a pele foi uma evolução natural de seu espírito criativo.
+              Localizado em Mogi Guaçu no coração da cidade, na Av. Nove de Abril, espaço Be Coworking, Junior Gotti redefiniu os limites do fine line e da camuflagem. Com formação em artes clássicas, sua transição para a pele foi uma evolução natural de seu espírito criativo.
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -95,8 +95,8 @@ export default function About() {
               <span className="font-mono text-[10px] uppercase tracking-widest opacity-40 block mb-2">Especialização</span>
               <ul className="font-serif text-xl font-medium flex flex-col gap-1">
                 <li>Fine Line</li>
-                <li>Micro-Realismo</li>
-                <li>Black & Grey</li>
+                <li>Camuflagem</li>
+                <li>Maori</li>
               </ul>
             </div>
             <div>
