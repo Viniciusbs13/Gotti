@@ -10,13 +10,6 @@ const portfolioItems = [
     size: "large",
   },
   {
-    id: 1,
-    title: "Espada",
-    category: "Fine Line",
-    image: "https://lh3.googleusercontent.com/d/1oxpJ35aNqegCtRkycAw8aECdG8TEyp5R",
-    size: "small",
-  },
-  {
     id: 2,
     title: "Bússola Realista",
     category: "Realismo",
@@ -95,7 +88,7 @@ export default function Gallery() {
             viewport={{ once: true }}
             onMouseEnter={() => setHoveredId(item.id)}
             onMouseLeave={() => setHoveredId(null)}
-            className={`relative overflow-hidden rounded-2xl group cursor-pointer ${
+            className={`relative overflow-hidden rounded-2xl group cursor-pointer bg-white/5 ${
               item.size === "large" ? "md:row-span-2" : 
               item.size === "medium" ? "md:row-span-1 md:col-span-2 lg:col-span-1" : ""
             }`}

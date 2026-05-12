@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 px-6 py-8 flex justify-between items-center ${!isOpen ? 'mix-blend-difference' : ''}`}>
+      <nav className={`fixed top-0 left-0 w-full z-[100] px-6 py-8 flex justify-between items-center ${!isOpen ? 'mix-blend-difference' : ''}`}>
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -70,7 +70,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-ink flex flex-col items-center justify-center gap-8 md:hidden z-[40]"
+            className="fixed inset-0 bg-ink flex flex-col items-center justify-center gap-8 md:hidden z-[90]"
           >
             {[
               { name: "Portfólio", href: "#portfolio" },
